@@ -1,0 +1,116 @@
+
+
+header a.login {
+  background-color: #ddd;
+  border-radius: 100%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  min-height: 100vh;
+}
+
+form {
+  padding: 50px;
+  margin: 20px auto;
+  width: unset;
+  border-radius: 25px;
+}
+
+input, textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border-color: #aaa;
+  font-family: rbt;
+}
+
+textarea {
+  width: 60%;
+  height: 120px;
+}
+
+.form {
+  margin-bottom: 40px;
+}
+
+.profile {
+  width: 70%;
+  margin: auto;
+}
+
+#profile-pic {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin: 40px;
+  background: url(../assets/img/user-large.svg) no-repeat center center/cover;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+#profile-pic button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.profile .btn {
+  width: 200px;
+  margin-top: 20px;
+}
+
+.profile input {
+  background-color: #fff;
+}
+
+#skills {
+  padding: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background-color: #ddd;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skill-text {
+  margin-right: 10px;
+}
+
+.skill-remove {
+  cursor: pointer;
+  background-color: #aaa;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+
+.skill-remove:hover {
+  transform: scale(1.1);
+}
+
+.skill-remove:active {
+  opacity: .8;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 414px) {
+
+}

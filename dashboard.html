@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="h-left">
+        <a href="/" class="logo">
+          <span class="img"></span>
+          <h2></h2>
+        </a>
+      </div>
+
+      <div class="h-right">
+        <a href="#" id="btn-logout" class="login"
+          ><img src="assets/img/user.svg" alt="user-icon" width="30px"
+        /></a>
+      </div>
+    </header>
+    <main>
+      <div class="profile">
+        <div id="profile-pic">
+          <button class="btn-ripple">+</button>
+        </div>
+        <form>
+          <div>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" />
+            <label for="surname">Apelido:</label>
+            <input type="text" name="surname" id="surname" />
+            <label for="tel">Contacto:</label>
+            <input type="text" name="tel" id="tel" placeholder="8XXXXXXXX" />
+          </div>
+          <div>
+            <select name="s-bairros" id="s-bairros"></select>
+            <select name="s-skills" id="s-skills"></select>
+            <button type="button" class="btn-ripple" id="btn-add-skill">
+              +
+            </button>
+          </div>
+          <div id="skills"></div>
+          <div>
+            <br />
+            <label for="about">Fale um pouco sobre si:</label>
+            <div>
+              <textarea name="about" id="about"></textarea>
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="btn">Gravar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+
+  <script src="js/config.js"></script>
+  <script src="js/dashboard.js"></script>
+</html>

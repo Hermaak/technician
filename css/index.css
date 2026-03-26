@@ -1,0 +1,112 @@
+
+
+header a.login {
+  background-color: #ddd;
+  border-radius: 100%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.technicians {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  width: 60%;
+  margin: 20px auto;
+}
+
+.technician-template {
+  background-color: #fff;
+  height: 340px;
+  box-shadow: 0 0 1px 1px #f1eded;
+  border: 1px solid #fafafa;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  animation: shine 3s 1s infinite;
+}
+
+.technician {
+  background-color: #fff;
+  height: 340px;
+  /* box-shadow: 0 0 1px 1px #f3efef; */
+  /* border: 1px solid #fafafa; */
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+
+.pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background: url(../assets/img/userpic.svg) no-repeat center center/40px;
+  background-color: #eee;
+  margin: 20px auto;
+}
+
+.name {
+  width: 100%;
+  height: 30px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.areas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.areas span {
+  min-height: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.location-contact {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 10px;
+  
+}
+
+.location-contact > div {
+  background-color: #eee;
+  flex: 1;
+  min-height: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+@keyframes shine {
+  from{opacity: .7;}
+  to{opacity: 1;}
+}
+
+/* Responsive */
+@media screen and (max-width: 414px) {
+
+}

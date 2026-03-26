@@ -1,0 +1,167 @@
+@font-face {
+  font-family: oday;
+  src: url(../assets/fonts/ONEDAY.ttf);
+}
+
+@font-face {
+  font-family: rbt;
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+:root {
+  --primary-color: #8a2be2;
+  --logo-bg: var(--primary-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  font-family: rbt;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 0 1px 1px #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+header .h-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h2 {
+  font-family: oday;
+  color: var(--primary-color);
+}
+
+.logo span {
+  color: #fff;
+  background: url(../assets/img/logo.svg) no-repeat center center/20px;
+  background-color: var(--logo-bg);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+input,
+textarea {
+  background: none;
+  border: 1px solid #444;
+  outline: none;
+  background-color: #fff;
+}
+
+input,
+label {
+  display: inline-block;
+  color: #444;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.btn {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 5px 10px #eee;
+  border-bottom: 2px solid #aaa;
+}
+
+.btn-ripple {
+  display: inline-flex;
+  padding: 15px;
+  width: 15px;
+  height: 10px;
+  margin: auto 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 5px 10px #eee;
+  border-bottom: 2px solid #aaa;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 5px 10px #eee;
+  border: 1px solid #aaa;
+  margin-top: 20px;
+  width: 200px;
+}
+
+textarea {
+}
+
+.a-sign,
+.a-recovery {
+  display: block;
+  margin: 10px;
+}
+
+.a-recovery {
+  text-align: right;
+}
+
+.a-sign {
+  text-align: center;
+}

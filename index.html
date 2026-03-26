@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technicians</title>
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="h-left">
+        <a href="/" class="logo">
+          <span class="img"></span>
+          <h2>Technician</h2>
+        </a>
+      </div>
+
+      <div class="h-right">
+        <a href="/dashboard.html" id="btn-logout" class="login"
+          ><img src="assets/img/user.svg" alt="user-icon" width="30px"
+        /></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="technicians"></section>
+    </main>
+    <script src="js/config.js"></script>
+    <script>
+      let tcs = new String("");
+      for (let i = 0; i < 12; i++) {
+        tcs += `
+            <div class="technician-template">
+              <div class="pic"></div>
+              <div class="name"></div>
+              <div class="areas">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="location-contact">
+                <div class="location"></div>
+                <div class="contact"></div>
+              </div>
+            </div>
+          `;
+      }
+      document.querySelector(".technicians").innerHTML = tcs;
+
+      async function getProfiles() {
+        const res = await fetch(api_url + "/user");
+        const data = await res.json();
+        const profiles = data.filter((d) => d.app_id === "technician");
+        console.log(profiles);
+        let tcs = new String("");
+        for (const pfl of profiles) {
+          console.log(pfl);
+          tcs += `
+            <div class="technician">
+              <div class="pic"></div>
+              <div class="name">${pfl.name + " " + pfl.surname}</div>
+              <div class="areas">
+                ${pfl.skills.map((s) => `<span>${SKILLS.find((sk) => sk.id == s).label}</span>`)}
+              </div>
+              <div class="location-contact">
+                <div class="location">${BAIRROS.find(b => b.id == pfl.location).label}</div>
+                <div class="contact"><a href='tel:+258${pfl.tel}'>Ligar</a></div>
+              </div>
+            </div>
+          `;
+        }
+        document.querySelector(".technicians").innerHTML = tcs;
+      }
+
+      getProfiles();
+    </script>
+  </body>
+</html>
