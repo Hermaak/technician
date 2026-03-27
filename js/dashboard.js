@@ -102,10 +102,10 @@ async function getProfile() {
 
   if (res.status === 200) {
     const data = await res.json();
-    document.getElementById("name").value = data.name;
-    document.getElementById("surname").value = data.surname;
-    document.getElementById("tel").value = data.tel;
-    document.getElementById("about").value = data.about;
+    document.getElementById("name").value = data.name || "";
+    document.getElementById("surname").value = data.surname || "";
+    document.getElementById("tel").value = data.tel || "";
+    document.getElementById("about").value = data.about || "";
     document.getElementById("s-bairros").value = data.location;
 
     let sks = "";

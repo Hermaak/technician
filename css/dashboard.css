@@ -112,5 +112,28 @@ textarea {
 
 /* Responsive */
 @media screen and (max-width: 414px) {
+  .profile {
+    width: 90%;
+  }
 
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  input {
+    padding: 15px;
+    margin-bottom: 5px;
+    width: 90%;
+  }
+
+  label {
+    display: block;
+  }
 }

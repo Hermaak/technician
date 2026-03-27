@@ -108,5 +108,7 @@ main {
 
 /* Responsive */
 @media screen and (max-width: 414px) {
-
+  .technicians {
+    width: 90%;
+  }
 }
