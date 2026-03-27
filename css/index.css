@@ -37,12 +37,11 @@ main {
 .technician {
   background-color: #fff;
   height: 340px;
-  /* box-shadow: 0 0 1px 1px #f3efef; */
-  /* border: 1px solid #fafafa; */
+  border: 1px solid #eee;
   border-radius: 5px;
   padding: 10px;
   position: relative;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #dedede;
 }
 
 
@@ -61,7 +60,9 @@ main {
   border-radius: 25px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
+  text-align: center;
 }
 
 .areas {

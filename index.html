@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Technicians</title>
+    <title>Technician</title>
     <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -51,10 +51,14 @@
         const res = await fetch(api_url + "/user");
         const data = await res.json();
         const profiles = data.filter((d) => d.app_id === "technician");
-        console.log(profiles);
+
+        for (let i = 0; i < 20; i++) {
+          profiles.push(profiles[0]);
+          profiles.push(profiles[1]);
+        }
+
         let tcs = new String("");
         for (const pfl of profiles) {
-          console.log(pfl);
           tcs += `
             <div class="technician">
               <div class="pic"></div>
@@ -63,7 +67,7 @@
                 ${pfl.skills.map((s) => `<span>${SKILLS.find((sk) => sk.id == s).label}</span>`)}
               </div>
               <div class="location-contact">
-                <div class="location">${BAIRROS.find(b => b.id == pfl.location).label}</div>
+                <div class="location">${BAIRROS.find((b) => b.id == pfl.location).label}</div>
                 <div class="contact"><a href='tel:+258${pfl.tel}'>Ligar</a></div>
               </div>
             </div>
